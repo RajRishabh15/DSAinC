@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>France Tech - TGV</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- React & React DOM (via CDN) -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body class="dark-mode">
+
+    <div id="react-bg-root"></div>
+    <div id="pill-nav-root"></div>
+
+    <div class="sub-nav observer-item">
+        <a href="technology.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> <span data-i18n="backHome">Back to Technology</span></a>
+    </div>
+
+    <header class="page-header observer-item">
+        <h1 class="text-gradient" data-i18n="tgvHeroTitle" style="font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom:1rem;">TGV: The Speed of Tomorrow</h1>
+        <p data-i18n="tgvHeroDesc" style="max-width:800px; margin: 0 auto; font-size:1.2rem; opacity:0.9;">Connecting the European continent through groundbreaking high-speed rail networks, holding global speed records, and redefining sustainable transport.</p>
+    </header>
+
+    <main class="container" style="padding-top: 2rem;">
+        
+        <div class="image-showcase observer-item">
+            <img src="assets/tgv_train.png" alt="Futuristic TGV high-speed train zooming across the French countryside at sunset">
+        </div>
+
+        <div class="details-grid">
+            <section class="card glass-effect observer-item">
+                <div class="card-content">
+                    <h2 data-i18n="tgvSection1Title">Pioneering High-Speed Rail</h2>
+                    <p data-i18n="tgvSection1Desc">Since its launch in 1981 between Paris and Lyon, the Train à Grande Vitesse revolutionized travel. The TGV system has continuously shattered world speed records for wheeled trains, cementing France's position as a global leader in railway technology.</p>
+                </div>
+            </section>
+
+            <section class="card glass-effect observer-item delay-1">
+                <div class="card-content">
+                    <h2 data-i18n="tgvSection2Title">Engineering the TGV M</h2>
+                    <p data-i18n="tgvSection2Desc">The latest generation, the TGV M (Avelia Horizon), represents a massive leap in eco-friendly design, featuring a 20% reduction in energy consumption, increased modularity, and fully digital diagnostic systems driving the 21st century's travel experience.</p>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="glass-effect observer-item delay-3">
+        <p data-i18n="footerText">© 2026 France Technology Hub. Designed with elegance.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="pill-nav.js"></script>
+    <script src="floating-lines.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>France Tech - Airbus</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- React & React DOM (via CDN) -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body class="dark-mode">
+
+    <div id="radar-bg-root" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -2;"></div>
+    <div id="pill-nav-root"></div>
+
+    <div class="sub-nav observer-item">
+        <a href="technology.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> <span data-i18n="backHome">Back to Technology</span></a>
+    </div>
+
+    <header class="page-header observer-item">
+        <h1 class="text-gradient" data-i18n="abHeroTitle" style="font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom:1rem;">Airbus: Pioneering the Skies</h1>
+        <p data-i18n="abHeroDesc" style="max-width:800px; margin: 0 auto; font-size:1.2rem; opacity:0.9;">Explore the legacy and future of European aviation, leading the charge towards zero-emission flights and unparalleled engineering.</p>
+    </header>
+
+    <main class="container" style="padding-top: 2rem;">
+        
+        <div class="image-showcase observer-item">
+            <img src="assets/airbus_a350.png" alt="Airbus A350 passenger airplane flying in the sky">
+        </div>
+
+        <div class="details-grid">
+            <section class="card glass-effect observer-item">
+                <div class="card-content">
+                    <h2 data-i18n="abSection1Title">A Legacy of Innovation</h2>
+                    <p data-i18n="abSection1Desc">Founded as a European consortium, Airbus revolutionized the aviation market by creating wide-body twin-engine aircraft and the iconic A380 double-decker. Today, it stands as the vanguard of sustainable aerospace solutions.</p>
+                </div>
+            </section>
+
+            <section class="card glass-effect observer-item delay-1">
+                <div class="card-content">
+                    <h2 data-i18n="abSection2Title">The ZEROe Initiative</h2>
+                    <p data-i18n="abSection2Desc">Looking to the future, Airbus is developing ZEROe, the world's first zero-emission commercial aircraft concept. Utilizing hydrogen propulsion, these revolutionary designs aim to enter service by 2035.</p>
+                </div>
+            </section>
+        </div>
+
+        <div class="image-showcase observer-item delay-2">
+            <img src="assets/airbus_zeroe.png" alt="Futuristic ZEROe airplane inside a brilliant hangar">
+        </div>
+
+    </main>
+
+    <footer class="glass-effect observer-item delay-3">
+        <p data-i18n="footerText">© 2026 France Technology Hub. Designed with elegance.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="pill-nav.js"></script>
+    <script src="radar-bg.js"></script>
+</body>
+</html>

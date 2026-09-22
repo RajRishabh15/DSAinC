@@ -1,0 +1,146 @@
+<head>
+    <title>Contact Me</title>
+    <style>
+        body{
+            background-color:rgb(0, 0, 0);
+            background-image:url(bck.jpeg);
+            background-repeat:no-repeat;
+            background-size:cover;
+        }
+        #info{
+            color:lightblue;
+            font-size:30px;
+            text-align:center;
+            
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        p{
+                margin:10px;
+            }
+        #info{
+            background-color:rgba(0, 0, 0, 0.5);
+            width:450px;
+            height:200px;
+            margin-top:15px;
+            margin-left:auto;
+            margin-right: auto;
+            border-radius:25px;
+            border:5px solid lightblue;
+            padding-top:30px;
+        }
+        #info p{
+            text-shadow: 2px 2px 5px navy;
+        }
+        .typed{
+            color:rgb(87, 169, 169);
+            font-size:40px;
+            font-weight:bold;
+            margin-left:45%;
+            margin-top:20px;
+        }
+        .typed-cursor{
+            color:rgb(80, 161, 161);
+            font-size:40px;
+            font-weight:bold;
+        }
+        .typed-cursor--blink{
+            animation: blink 0.7s infinite;
+        }
+        @keyframes blink{
+            0%, 100%{opacity:1;}
+            50%{opacity:0;}
+        }
+        @keyframes typing{
+            from{width:0;}
+            to{width:100%;}
+        }
+        ul{
+            list-style-type:none;
+            margin:0;
+            margin-top:10px;
+            padding:0;
+            overflow:hidden;
+            background-color:lightblue;
+        }
+        li{
+            float:left;
+        }
+        li a{
+            display:block;
+            color:black;
+            text-align:center;
+            padding:14px 16px;
+            text-decoration:none;
+        }
+        li a:hover{
+            background-color:rgb(87, 169, 169);
+        }
+        #info2{
+            background-color:rgb(0, 0, 0);
+            border-radius:15px;
+            border:4px double aqua;
+            display: block;
+            width:600px;
+            margin-left:auto;
+            margin-right:auto;
+            margin-top:20px;
+        }
+        footer{
+            background-color:white;
+            text-align:center;
+            margin-top:70px;
+            
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-radius: 5px;
+            padding:10px;
+        }
+        header{
+            margin-top:0px;
+            background-color: rgb(57, 97, 133);
+            padding:2px;
+            border-radius:10px;
+            border-style:double;
+
+        }
+    </style>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+<body>
+    <header>
+        <h3 style="color:rgb(16, 17, 18); text-align:center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Contact Me</h1>
+    </header>
+    <ul>
+        <li><a href="basic.html">Home</a></li>
+        <li><a href="second.html">Skills</a></li>
+    </ul>
+
+
+    <div id="info">
+        <p>Email:rajrish0915@gmail.com</p>
+        <p>Phone: +91 9876543210</p>
+        <p>LinkedIn: linkedin.com/in/rajrish</p>
+    </div>
+    <div id="info2">
+        <p style="color:lightblue; font-size:25px; text-align:center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Feel free to reach out to me for any inquiries or collaborations!</p>
+    </div>
+    <span class="typed" data-typed-items="Web Designer, Web Developer, Programmer">Developer</span>
+    <span class="typed-cursor typed-cursor--blink" aria-hidden="true">|</span>
+    <footer>&copy; &reg; 2025 Rishabh Raj</footer>
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+            var typedElements=document.querySelectorAll('.typed');
+            typedElements.forEach(function(element){
+                var items=element.getAttribute('data-typed-items').split(',');
+                new Typed(element,{
+                    strings:items,
+                    typeSpeed:100,
+                    backSpeed:50,
+                    backDelay:2000,
+                    loop:true
+                });
+            });
+        });
+
+    </script>
+
+</body>

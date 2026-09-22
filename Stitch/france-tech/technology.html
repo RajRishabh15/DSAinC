@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>France Tech - Technology Hub</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- React & React DOM (via CDN) -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <style>
+        .portal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            padding-bottom: 5rem;
+        }
+        
+        .portal-card {
+            position: relative;
+            height: 400px;
+            border-radius: 20px;
+            overflow: hidden;
+            text-decoration: none;
+            display: flex;
+            align-items: flex-end;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .portal-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(159, 41, 255, 0.2);
+            border-color: rgba(255,255,255,0.2);
+        }
+
+        .portal-bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-size: cover;
+            background-position: center;
+            z-index: 0;
+            transition: transform 0.6s ease;
+        }
+
+        .portal-card:hover .portal-bg {
+            transform: scale(1.1);
+        }
+
+        .portal-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to top, rgba(6,0,16,0.95) 0%, rgba(6,0,16,0.2) 60%, transparent 100%);
+            z-index: 1;
+        }
+
+        .portal-content {
+            position: relative;
+            z-index: 2;
+            padding: 2.5rem;
+            width: 100%;
+        }
+
+        .portal-title {
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .portal-desc {
+            color: rgba(255,255,255,0.8);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .portal-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 1.2rem;
+            transition: gap 0.3s ease;
+        }
+
+        .portal-card:hover .portal-action {
+            gap: 15px;
+        }
+    </style>
+</head>
+<body class="dark-mode">
+
+    <div id="react-bg-root"></div>
+    <div id="pill-nav-root"></div>
+
+    <header class="page-header observer-item" style="margin-top: 6rem;">
+        <h1 class="text-gradient" data-i18n="techPageHeroTitle" style="font-size: clamp(2.5rem, 6vw, 4rem); margin-bottom:1rem;">Industrial Technologies</h1>
+        <p data-i18n="techPageHeroDesc" style="max-width:800px; margin: 0 auto; font-size:1.2rem; opacity:0.9;">Select a sector to explore France's monumental achievements in engineering, aviation, and high-speed terrestrial transport.</p>
+    </header>
+
+    <main class="container">
+        <div class="portal-grid">
+            <!-- AIRBUS PORTAL -->
+            <a href="airbus.html" class="portal-card observer-item">
+                <div class="portal-bg" style="background-image: url('assets/airbus_a350.png');"></div>
+                <div class="portal-overlay"></div>
+                <div class="portal-content">
+                    <h2 class="portal-title" data-i18n="aeroTitle">Airbus & Aviation</h2>
+                    <p class="portal-desc" data-i18n="abHeroDesc">Explore the legacy and future of European aviation, leading the charge towards zero-emission flights.</p>
+                    <div class="portal-action">Enter Sector <i class="fa-solid fa-arrow-right"></i></div>
+                </div>
+            </a>
+
+            <!-- TGV PORTAL -->
+            <a href="tgv.html" class="portal-card observer-item delay-1">
+                <div class="portal-bg" style="background-image: url('assets/tgv_train.png');"></div>
+                <div class="portal-overlay"></div>
+                <div class="portal-content">
+                    <h2 class="portal-title" data-i18n="trainTitle">TGV & High-Speed Rail</h2>
+                    <p class="portal-desc" data-i18n="tgvHeroDesc">Connecting the European continent through groundbreaking high-speed rail networks and global speed records.</p>
+                    <div class="portal-action">Enter Sector <i class="fa-solid fa-arrow-right"></i></div>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <footer class="glass-effect observer-item delay-2">
+        <p data-i18n="footerText">© 2026 France Technology Hub. Designed with elegance.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="pill-nav.js"></script>
+    <script src="floating-lines.js"></script>
+</body>
+</html>
